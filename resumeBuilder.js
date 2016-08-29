@@ -244,125 +244,6 @@ var education = {
 		}]
 };
 
-//$("#education").append(HTMLschoolStart);
-
-//for ( var i = 0; i < education.schools.length; i ++ ) {
-
-//var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[i].name);
-
-//var formattedschoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-
-//var formattedschoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-
-//var formattedschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
-
-//var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
-
-//var formattedonlineURL = HTMLonlineURL.replace("%data%", education.schools[i].url);
-
-//$(".education-entry:last").append(formattedschoolName + formattedschoolLocation);
-
-//$(".education-entry:last").append(formattedschoolDegree);
-
-//$(".education-entry:last").append(formattedschoolMajor);
-
-//$(".education-entry:last").append(formattedschoolDates);
-
-//$(".education-entry:last").append(formattedonlineURL);
-
-//}
-
-//$("#education").append(HTMLonlineClasses);
-
-//for ( var i = 0; i < education.onlineSchools.length; i ++ ) {
-
-//$("#education").append(HTMLschoolStart);
-
-//var formattedonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineSchools[i].school);
-
-//var formattedonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineSchools[i].title);
-
-//var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineSchools[i].dates);
-
-//var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineSchools[i].url);
-
-//$(".education-entry:last").append(formattedonlineSchool);
-
-//$(".education-entry:last").append(formattedonlineTitle);
-
-//$(".education-entry:last").append(formattedonlineDates);
-
-//$(".education-entry:last").append(formattedonlineURL);
-
-//}
-
-var projects = {
-
-	"myprojects" : [{ 
-
-		"title" : ["Introduction to Programming Course Projects"],
-		"dates" : ["March-September, 2016"],
-		"description": ["My projects for the Introduction to Programming Nano-Degree course have included creating and designing my own, personal webite via HTML, creating and running a Mad Libs Generator, creating a movie website, finding my next path to future opportunities and creating this Resume.  Below are a few examples of my work"],
-		"images" : [
-				 "images/stage1.png",
-				 "images/stage2.png", 
-				 "images/stage3.png" 
-		]
-   }]
-
-};
-
-for ( var i = 0; i < projects.myprojects.length; i ++ ) {
-
-$("#projects").append(HTMLprojectStart);
-
-var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.myprojects[i].title);
-
-var formattedprojectDates = HTMLprojectDates.replace("%data%", projects.myprojects[i].dates);
-
-var formattedprjectDescription = HTMLprojectDescription.replace("%data%", projects.myprojects[i].description);
-
-$(".project-entry:last").append(formattedprojectTitle);
-
-$(".project-entry:last").append(formattedprojectDates);
-
-$(".project-entry:last").append(formattedprjectDescription);
-
-for ( var j = 0; j < projects.myprojects[i].images.length; j ++ ) {
-
-var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.myprojects[i].images[j]);
-
-$(".project-entry:last").append(formattedprojectImage);
- 
- }
-
-}
-
-var education = {
-	
-	"schools" : [{
-	   
-		 "name" : "Florida Atlantic University",
-		 "location" : ["Boca Raton, FL"],
-		 "degree" : "BS",
-		 "major" : "Marketing",
-		 "dates" : "1996-2000 -- ",
-		 "url" : "http://fau.edu/"
-
-		}],
-
-	"onlineSchools" : [{
-
-		 "title" : ["Introduction to Programming Nano-Degree"],
-		 "school" : "Udacity",
-		 "dates" : ["March-September, 2016"],
-		 "url" : "https://www.udacity.com/"
-		 //"minor" : "JavaScript",
-		 //"graduation year" : "2016",
-		 //"Online Courses" : ["Introduction to Programming", "JavaScript Syntax"]
-		}]
-};
-
 $("#education").append(HTMLschoolStart);
 
 for ( var i = 0; i < education.schools.length; i ++ ) {
@@ -415,6 +296,36 @@ $(".education-entry:last").append(formattedonlineURL);
 
 }
 
-//var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+var project = {
 
-//$(".work-entry:last").append(formattedLocation);
+	"myprojects" : [{ 
+
+		"title" : ["Introduction to Programming Course Projects"],
+		"dates" : ["March-September, 2016"],
+		"description": ["My projects for the Introduction to Programming Nano-Degree course have included creating and designing my own, personal webite via HTML, creating and running a Mad Libs Generator, creating a movie website, finding my next path to future opportunities and creating this Resume"],
+		"image" : ["images/Stage 1_Project Screenshot.png", "images/Stage 2_Project Screenshot.png", "Stage 3_Movie Website Mini Project_Screenshot.png"]
+   }]
+
+};
+
+for ( var i = 0; i < project.myprojects.length; i ++ ) {
+
+$("#projects").append(HTMLprojectStart);
+
+var formattedprojectTitle = HTMLprojectTitle.replace("%data%", project.myprojects[i].title);
+
+var formattedprojectDates = HTMLprojectDates.replace("%data%", project.myprojects[i].dates);
+
+var formattedprjectDescription = HTMLprojectDescription.replace("%data%", project.myprojects[i].description);
+
+var formattedprojectImage = HTMLprojectImage.replace("%data%", project.myprojects[i].image);
+
+$(".project-entry:last").append(formattedprojectTitle);
+
+$(".project-entry:last").append(formattedprojectDates);
+
+$(".project-entry:last").append(formattedprjectDescription);
+
+$(".project-entry:last").append(formattedprojectImage);
+
+}
