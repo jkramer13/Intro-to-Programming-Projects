@@ -105,6 +105,32 @@ var formattedSkills = HTMLskills.replace(['Web Development', 'HTML', 'CSS', 'Pyt
 
 $('#header').append('<span>' + HTMLskills + '</span><hr>');
 
+//if (bio.skills.length > 0) {
+
+//$("#header").append(HTMLskillsStart);
+
+//var formattedSkills = HTMLskills.replace("
+	//%data%", bio.skills [0] )
+
+//$("#skills").append(formattedSkills);
+//formattedSkills = HTMLskills.replace("%data",
+//bio.skills [1] );
+
+//$("#skills").append(formattedSkill);
+//formattedSkills = HTMLskills.replace("%data",
+//bio.skills [2] );
+
+//$("#skills").append(formattedSkill);
+//formattedSkills = HTMLskills.replace("%data",
+//bio.skills [3] );
+
+//$("#skills").append(formattedSkill);
+//formattedSkills = HTMLskills.replace("%data",
+//bio.skills [4] );
+//$("#skills").append(formattedSkill);
+
+//}
+
 var HTMLbioPic = '<img src="images/app2.png" class="biopic">';
 
 var myBiopic = bio.bioPic;
@@ -219,6 +245,48 @@ $(".work-entry:last").append(formattedDescription);
 
 //$("#main").append(bio.SchoolCity);
 
+var projects = {
+
+	"myprojects" : [{ 
+
+		"title" : ["Introduction to Programming Course Projects"],
+		"dates" : ["March-September, 2016"],
+		"description": ["My projects for the Introduction to Programming Nano-Degree course have included creating and designing my own, personal webite via HTML, creating and running a Mad Libs Generator, creating a movie website, finding my next path to future opportunities and creating this Resume.  Below are examples of my work from the first 3 Projects as previously referenced:"],
+		"images" : [
+				 "images/stage1.png", 
+				 "images/stage2.png", 
+				 "images/stage3.png"
+		]
+   }]
+
+};
+
+for ( var i = 0; i < projects.myprojects.length; i ++ ) {
+
+$("#projects").append(HTMLprojectStart);
+
+var formattedprojectTitle = HTMLprojectTitle.replace("%data%", projects.myprojects[i].title);
+
+var formattedprojectDates = HTMLprojectDates.replace("%data%", projects.myprojects[i].dates);
+
+var formattedprjectDescription = HTMLprojectDescription.replace("%data%", projects.myprojects[i].description);
+
+$(".project-entry:last").append(formattedprojectTitle);
+
+$(".project-entry:last").append(formattedprojectDates);
+
+$(".project-entry:last").append(formattedprjectDescription);
+
+for ( var j = 0; j < projects.myprojects[i].images.length; j ++ ) {
+
+var formattedprojectImage = HTMLprojectImage.replace("%data%", projects.myprojects[i].images[j]);
+
+$(".project-entry:last").append(formattedprojectImage);
+ 
+ }
+
+}
+
 var education = {
 	
 	"schools" : [{
@@ -228,7 +296,7 @@ var education = {
 		 "degree" : "BS",
 		 "major" : "Marketing",
 		 "dates" : "1996-2000 -- ",
-		 "url" : 'http://fau.edu/'
+		 "url" : "http://fau.edu/"
 
 		}],
 
@@ -237,7 +305,7 @@ var education = {
 		 "title" : ["Introduction to Programming Nano-Degree"],
 		 "school" : "Udacity",
 		 "dates" : ["March-September, 2016"],
-		 "url" : 'https://www.udacity.com/'
+		 "url" : "https://www.udacity.com/"
 		 //"minor" : "JavaScript",
 		 //"graduation year" : "2016",
 		 //"Online Courses" : ["Introduction to Programming", "JavaScript Syntax"]
@@ -296,36 +364,21 @@ $(".education-entry:last").append(formattedonlineURL);
 
 }
 
-var project = {
+//var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 
-	"myprojects" : [{ 
+//$(".work-entry:last").append(formattedLocation);
 
-		"title" : ["Introduction to Programming Course Projects"],
-		"dates" : ["March-September, 2016"],
-		"description": ["My projects for the Introduction to Programming Nano-Degree course have included creating and designing my own, personal webite via HTML, creating and running a Mad Libs Generator, creating a movie website, finding my next path to future opportunities and creating this Resume"],
-		"image" : ["images/Stage 1_Project Screenshot.png", "images/Stage 2_Project Screenshot.png", "Stage 3_Movie Website Mini Project_Screenshot.png"]
-   }]
+//for (job in work.jobs) {
+	
+//$("workExperience").append(HTMLworkStart);
 
-};
+//var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+	
+//var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 
-for ( var i = 0; i < project.myprojects.length; i ++ ) {
+//var formattedEmployerTitle = formattedEmployer + formattedTitle;
 
-$("#projects").append(HTMLprojectStart);
+//$(".work-entry:last").append(formattedEmployerTitle);
 
-var formattedprojectTitle = HTMLprojectTitle.replace("%data%", project.myprojects[i].title);
+//}
 
-var formattedprojectDates = HTMLprojectDates.replace("%data%", project.myprojects[i].dates);
-
-var formattedprjectDescription = HTMLprojectDescription.replace("%data%", project.myprojects[i].description);
-
-var formattedprojectImage = HTMLprojectImage.replace("%data%", project.myprojects[i].image);
-
-$(".project-entry:last").append(formattedprojectTitle);
-
-$(".project-entry:last").append(formattedprojectDates);
-
-$(".project-entry:last").append(formattedprjectDescription);
-
-$(".project-entry:last").append(formattedprojectImage);
-
-}
