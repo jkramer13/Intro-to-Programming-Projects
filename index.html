@@ -3,9 +3,7 @@
 <!--
 This is an HTML document. It contains information about how elements in the website
 are arranged. In other words, it describes the layout of a website.
-
 I can't wait to see the resumes you put together!
-
 Cameron Pittman, Udacity Course Developer
 -->
 
@@ -30,8 +28,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
   -->
-<!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
-
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyArhKNReFHCVg7iz8igCjM8MGHuxNRsziU"></script>
+  
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
@@ -54,15 +52,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="projects">
       <h2>Projects</h2>
-      <div class="project-entry">
-        <a href="#">Introduction to Programming Course Projects</a>
-        <div class="date-text">March-September, 2016</div>
-        <p><br>My projects for the Introduction to Programming Nano-Degree course have included creating and designing my own, personal webite via HTML, creating and running a Mad Libs Generator, creating a movie website, finding my next path to future opportunities and creating this Resume.  Below are a few examples of my work
-        </p>
-        <img src="images/stage1.png"> 
-        <img src="images/stage2.png">
-        <img src="images/stage3.png">
-    </div>
+      <div class="project-entry"></div>
+      </div>
     <div id="education" class="gray">
       <h2>Education</h2>
     </div>
@@ -86,7 +77,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
   about what is actually visible on a website.
-
   While HTML is a static document, the browser converts HTML to the
   DOM and the DOM can change. In fact, JavaScript's power comes from
   its ability to manipulate the DOM, which is essentially a JavaScript
@@ -120,17 +110,11 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     // Notice how all of a sudden there's JavaScript inside this HTML
     // document? You can write JavaScript between <script> tags. At the end of your
     // JavaScript, don't forget the closing script tag with the slash (/).
-
-
     // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
     //   two slashes for all following characters on a single line, or
-
     /*
         an opening and closing set of slash asterisks for block comments.
     */
-
-
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.display = 'none';
     }
@@ -152,6 +136,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';
     }
-  </script>
+</script>
 </body>
 </html>
